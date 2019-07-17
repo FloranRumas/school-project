@@ -1,0 +1,7 @@
+#On active mod_rewrite d'apache
+RewriteEngine On
+#On récupère l'url principal ici /rest
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+#On redirige l'ensemble des requêtes vers index.php
+RewriteRule (.*) index.php [QSA,L]

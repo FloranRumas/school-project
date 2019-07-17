@@ -1,0 +1,7 @@
+#On active mod_rewrite
+RewriteEngine on
+RewriteBase /rest/
+#On redirige l'ensemble des requêtes dans le dossier public
+RewriteRule ^$ public/ [L]
+#On conserve l'URL
+RewriteRule (.*) public/$1 [L]
